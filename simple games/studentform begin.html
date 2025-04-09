@@ -1,0 +1,59 @@
+<CENTER>
+<h1>STUDENT FORM</h1>
+<table border="1px" style="padding: 2px;">
+ <div id="tab">   
+    <tr>
+        <td >Name:</td><td><input type="text" id="col1"></tr>
+    </tr>
+    <tr>
+        <td>Age:</td><td><input type="number"></td>
+    </tr>
+    <tr>
+        <td>Gender:</td><td><input type="radio">Male<input type="radio">Female</td></tr>
+    </tr>
+    <tr>
+        <td>Course:</td><td>
+    <select>
+        <option></option>
+            <option>Full Stack Development</option>
+            <option>Data Scientist</option>
+            <option>Block Chain</option>
+            <option>Frontend</option>
+            <option>backend</option>
+        </select></td>
+    </tr>
+    </tr>
+    <tr>
+        <td>E-mail:</td><td><input type="email"></tr>
+    </tr><div>
+    <tr><td><td><button onclick="save()">Save</button></td></tr>
+    
+    </table>
+    <br>
+    <br>
+
+<table id="but" border="1px">
+    <tr style="font-weight: bolder;"><td><b>Name</td><td>Age</td><td>gender</td><td>corse</td></b></tr>
+<tr id="row"><td></td><td></td><td></td></tr></table></CENTER>
+<style>
+    button{
+        width: 150px;
+background-color: rgb(12, 246, 246);
+    }
+    </style>
+    <script>
+        var table=document.getElementById("tab")
+        var button=document.getElementById("but")
+        var td=document.getElementsByTagName("table")
+        
+function save()
+{
+var listen=document.createElement("table")
+listen.innerHTML=td.value+"<button onclick='del(event)''>delete</button>"
+table.append(listen)
+    }
+    function del(event)
+    {
+event.target.parentElement.remove()
+    }
+        </script>

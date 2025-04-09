@@ -1,0 +1,32 @@
+<meta name="viewport" content="width=device-width,initial-scale=1.0" >
+<h1>Guess the Number from 1 to 10</h1>
+<input id="guessnumber">
+<button onclick="check()">check </button>
+</input>
+<p id="result">Your right or wromg</p>
+<p id ="score">Score:10</p>
+<script>
+    var guessnum=document.getElementById("guessnumber");
+    var result=document.getElementById("result");
+    var score=document.getElementById("score");
+    var randnum=Math.floor(Math.random()*10)+1;
+var score1=10
+function check()
+{
+    var entnum=guessnum.value
+    if(randnum==entnum)
+    {
+        console.log("right💕💕💕💕");
+        result.textContent="right"
+        alert("yu won")
+    }
+    else{
+        score1=score1-1;
+        console.log("wrong😭😭😭");
+        result.textContent="wrong"+randnum;
+        score.textContent="score"+score1;
+    }
+
+
+}
+    </script>

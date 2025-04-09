@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+      integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="code">
+        <form action="" id="frm">
+            <div class="form-group">
+                <label for="size">Enter Website Link</label>
+            <input type="url" id="url" placeholder="Enter URL" required>
+            </div>
+            <div class="form-group">
+              <label for="size ">Enter the size</label>
+            <select name="" id="size">
+                <option value="100">100×100</option>
+                <option value="200">200×200</option>
+                <option value="300">300×300</option>
+                <option value="400">400×400</option>
+            </select>
+            </div>
+
+            <div class="form-single-group">
+                <label for="colorDark">Color Dark</label>
+                <input type="color" id="colordark" value="#000000">
+            </div>
+            <div class="form-single-group">
+                <label for="colorLight">Color Light</label>
+                <input type="color" id="colorlight" value="#ffffff">
+            </div>
+            <button type="submit" id="genrate">Generate QR Code</button>
+            <a type="submit" id="btn-save">Save</a>
+
+        </form>
+    </div>
+
+    <div class="output">
+      <div id="qrcode">
+        
+      </div>
+        <!-- <img src="./images/Untitled.png" alt=""> -->
+        <div id="loading">
+          <div id="spinner"></div>
+          <p>Please wait...</p>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
